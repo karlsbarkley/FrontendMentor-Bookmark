@@ -1,0 +1,182 @@
+#navigation-top-desktop {
+  display: block;
+  @include respond(tab-port) {
+    display: none;
+  }
+}
+
+#navigation-top-mobile {
+  display: none;
+  padding-bottom: 2rem;
+  @include respond(tab-port) {
+    display: block;
+  }
+}
+
+/* Universal navigation settings that apply to the top and bottom sections */
+.nav {
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding-top: 2rem;
+
+  /* Remove bullet points from list items */
+  li {
+    list-style-type: none;
+  }
+
+  /* Change color on hover */
+  a:hover {
+    color: var(--color-secondary);
+  }
+
+  /* Apply settings to buttons */
+  .btn {
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+  }
+}
+
+/* Specific settings for the top navigation section */
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-box {
+  display: flex;
+  flex: 0 0 50%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.burger {
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-text-dark);
+  margin: 5px;
+  transition: all 0.1s ease-in;
+}
+
+/* Change the appearance of the burger when it's active */
+.burger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active .line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.burger.active .line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.dropdown {
+  border: 1px solid purple;
+  display: none;
+  position: absolute;
+  z-index: 50;
+  background-color: var(--color-text-dark);
+  opacity: 0.9;
+  width: 100%;
+  height: 90vh;
+  padding: 3rem;
+
+  a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    letter-spacing: 2.5px;
+  }
+  li {
+    display: block;
+    width: 100%;
+    border-top: 1px solid #979797;
+    text-align: center;
+    padding-top: 5rem;
+  }
+}
+
+/* Show the dropdown menu */
+.dropdown.show {
+  display: block;
+}
+
+.dropdown-items {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-list {
+  height: 50%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.dropdown-socials {
+  display: flex;
+  width: 50%;
+  li {
+    border: none;
+  }
+}
+
+///////////////////////////////////////
+//Navigation for the footer section only
+/* Specific settings for the bottom navigation section */
+#navigation-bottom {
+  background-color: var(--color-text-dark);
+
+  /* Change link color */
+  a {
+    color: white;
+  }
+  a:hover {
+    color: var(--color-secondary);
+  }
+
+  min-height: 8rem;
+  @include respond(tab-port) {
+    min-height: 30rem;
+  }
+}
+
+.nav-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: inherit;
+  @include respond(tab-port) {
+    flex-direction: column;
+    justify-content: space-around;
+    .nav-box {
+      display: flex;
+      flex-direction: column;
+      & > * {
+        padding-top: 3rem;
+        font-size: 1.7rem;
+        letter-spacing: 1.73px;
+      }
+    }
+  }
+}
+
+.nav-box-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  li:last-child {
+    padding-left: 3rem;
+  }
+}

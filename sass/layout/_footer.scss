@@ -1,0 +1,78 @@
+// Call to action section
+#cta {
+  margin-top: 7rem;
+  background-color: var(--color-primary);
+  min-height: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  p {
+    color: white;
+    opacity: 1;
+    letter-spacing: 5px;
+  }
+  h2 {
+    color: white;
+  }
+}
+
+.cta-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10rem 20rem;
+  gap: 2rem;
+
+  @include respond(tab-land) {
+    padding: 5rem;
+  }
+
+  p {
+    color: white;
+    opacity: 1;
+    letter-spacing: 5px;
+  }
+  h2 {
+    color: white;
+  }
+}
+
+.email-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+label[for="email-input"] {
+  display: none;
+}
+
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.icon-wrapper {
+  position: absolute;
+  left: 27rem;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  display: none;
+}
+
+input[type="email"] {
+  padding-left: 1rem;
+}
+
+input:invalid + .icon-wrapper {
+  opacity: 1;
+}
+
+input:invalid:focus {
+  outline: none;
+}

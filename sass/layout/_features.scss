@@ -1,0 +1,57 @@
+#features {
+  min-height: 300px;
+  text-align: center;
+}
+
+.features {
+  margin-top: 4rem;
+  padding: 0 15rem;
+  @include respond(phone) {
+    padding: 0 5rem;
+  }
+}
+
+.nav-tabs {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+//Feature tab navigation
+
+.tabs {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  justify-content: space-around;
+  border-bottom: 1px solid rgba(73, 93, 207, 0.20012);
+
+  @include respond(phone) {
+    flex-direction: column;
+    &:last-child {
+      border-top: 1px solid rgba(73, 93, 207, 0.20012);
+      border-bottom: none;
+    }
+  }
+}
+
+.tab {
+  padding: 10px;
+  cursor: pointer;
+  @include respond(phone) {
+    border-bottom: 1px solid rgba(73, 93, 207, 0.20012);
+  }
+}
+
+.tab.active {
+  border-bottom: 3px solid var(--color-secondary);
+}
+
+.tab-content .tab-pane {
+  display: none;
+}
+
+.tab-content .tab-pane.active {
+  display: block;
+}

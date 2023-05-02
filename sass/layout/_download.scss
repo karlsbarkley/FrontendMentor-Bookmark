@@ -1,0 +1,12 @@
+#download {
+  min-height: 300px;
+  text-align: center;
+}
+
+.download-content {
+  margin-top: 4rem;
+  padding: 0 15rem;
+  @include respond(phone) {
+    padding: 0 5rem;
+  }
+}

@@ -1,0 +1,84 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    min-height: 4.8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    text-decoration: none;
+
+    padding: 1rem 2.4rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: 1.4rem;
+    letter-spacing: 0.25px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.20012);
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 1rem 2rem rgba(black, 0.2);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(black, 0.2);
+  }
+}
+
+.btn.btn {
+  &--primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    border: 2px solid var(--color-primary);
+
+    &:hover {
+      background-color: white;
+      color: var(--color-primary);
+    }
+  }
+
+  &--light {
+    background-color: #f7f7f7;
+    color: var(--color-text-dark);
+    border: 2px solid #f7f7f7;
+
+    &:hover {
+      background-color: white;
+      color: var(--color-text-dark);
+      border: 2px solid var(--color-text-dark);
+    }
+  }
+
+  &--red {
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
+    border: 2px solid var(--color-secondary);
+
+    &:hover {
+      background-color: white;
+      color: var(--color-secondary);
+    }
+  }
+
+  &--dropdown {
+    width: 100%;
+    letter-spacing: 2.5px;
+    font-size: 1.7rem;
+    background-color: inherit;
+    color: var(--color-text-light);
+    border: 2px solid var(--color-text-light);
+
+    &:hover {
+      background-color: white;
+      color: var(--color-secondary);
+    }
+  }
+}

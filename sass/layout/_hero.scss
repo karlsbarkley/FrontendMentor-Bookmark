@@ -1,0 +1,20 @@
+#hero {
+  min-height: 40vh;
+  margin-top: 4rem;
+}
+
+#hero > .flex-container {
+  flex-direction: row;
+
+  @include respond(tab-port) {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+#hero > .flex-container .box-2::after {
+  top: 5rem;
+  left: 15rem;
+}

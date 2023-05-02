@@ -1,0 +1,51 @@
+.flex-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 5rem 0;
+  gap: 5rem;
+
+  @include respond(tab-port) {
+    flex-direction: column-reverse;
+  }
+
+  .box-1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    @include respond(phone) {
+      text-align: center;
+      align-items: center;
+    }
+  }
+
+  .box-2 {
+    position: relative;
+    flex: 1;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+      @include respond(tab-port) {
+        max-width: 80%;
+      }
+    }
+    &::after {
+      content: "";
+      background-color: var(--color-primary);
+      height: 80%;
+      width: 900rem;
+      position: absolute;
+      border-radius: 316.5px;
+      top: 10rem;
+      right: 15%;
+      z-index: -1;
+      contain: none;
+      overflow: hidden;
+    }
+  }
+}
