@@ -2,18 +2,17 @@
 
 This is a solution to the [Bookmark landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0b588a9edda32581d29158). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Table of contents
+## To run
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
+#### Download npm
+- I built this using SCSS, so you'll need to use npm to download node-modules 
+#### Run commands
+- There are a few custom scripts in there to work on this project and build it so the css is compressed & ready for a live site. 
+To run:
+```npm run start```
+This will combine the main.scss to the style.css and watch for any changes. It will also open up live-server along with it
+#### Ready to build
+When you are ready to build and deploy on a live site you can run ```npm run build:css``` which will run a compiler, prefixer, compress, and finally build step
 
 ## Overview
 
@@ -32,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- [Live Site URL](https://your-live-site-url.com)
+- [Live Site URL](https://karlsbarkley.github.io/FrontendMentor-Bookmark/)
 
 ## My process
 
