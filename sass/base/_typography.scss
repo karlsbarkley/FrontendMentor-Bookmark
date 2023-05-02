@@ -46,3 +46,10 @@ a:visited {
   text-decoration: none;
   color: var(--color-text-dark);
 }
+
+svg {
+  fill: #fff;
+  &:hover {
+    fill: var(--color-secondary);
+  }
+}
